@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'MyFirstProject';
+  title:string = 'Kiekeboe';
+  gebeten: boolean = false;
+  bericht:string = "";
+  vanBeneden:string="";
+  onbekendeBijtWiske() {
+    this.gebeten = true;
+  }
+  geefBoodschapDoor(x:string) {
+    console.log(x);
+    this.bericht = x;
+
+  }
+  doeIetsMet(x:string){
+    this.vanBeneden = x;
+  }
 }

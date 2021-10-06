@@ -1,0 +1,17 @@
+<div>
+    <p>{{naam}}</p>
+    <ul>
+        <li>actions</li>
+        <!-- <button (click)="bijtWiske()">bijt Wiske</button> -->
+        <!-- <button (click)="transgender()">maak een Wiske van Suske</button> -->
+        <!-- <div (mouseover)="doSomething()">TEST</div> -->
+        <input type="text" (input)="tellme()">
+        <li>reactions</li>
+        <div [hidden]="verborgen">IK BEN VERBORGEN</div>
+        <input type="checkbox" #check>
+        {{check.checked}}
+        <input [value]="blabla">
+        {{blabla}}
+        <button (click)="setBlabla()"></button>
+    </ul>
+</div>
