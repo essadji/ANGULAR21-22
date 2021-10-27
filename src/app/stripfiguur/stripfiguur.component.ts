@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DayService } from '../day.service';
 
 @Component({
   selector: 'stripfiguur',
@@ -7,9 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class StripfiguurComponent implements OnInit {
 
-  constructor() { }
-
-  naam = "SUSKE";
+  constructor(private dayService:DayService) { 
+    this.dag2 = dayService.today;
+  }
+  @Input() dag:string ="";
+  dag2:string ="";
+  @Input() naam:string = "";
   verborgen = true;
 
   ngOnInit(): void {

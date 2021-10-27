@@ -7,6 +7,8 @@ import { WiskeComponent } from './wiske/wiske.component';
 import { SuskeComponent } from './suske/suske.component';
 import { TitelbalkComponent } from './titelbalk/titelbalk.component';
 import { StripfiguurComponent } from './stripfiguur/stripfiguur.component';
+import { NamechangerPipe } from './namechanger.pipe';
+import { FahrenheitPipe } from './fahrenheit.pipe';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { StripfiguurComponent } from './stripfiguur/stripfiguur.component';
     WiskeComponent,
     SuskeComponent,
     TitelbalkComponent,
-    StripfiguurComponent
+    StripfiguurComponent,
+    NamechangerPipe,
+    FahrenheitPipe
   ],
   imports: [
     BrowserModule

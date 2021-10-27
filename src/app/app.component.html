@@ -5,6 +5,35 @@
 <!-- <wiske [isGebeten]="gebeten"></wiske> -->
 <!-- <wiske></wiske> -->
 <!-- <button (click)="onbekendeBijtWiske()">laat wiske bijten</button>   -->
-<suske [boodschap]="bericht" (naarBoven)="doeIetsMet($event)"></suske>
-<input type="text" #message><button (click)="geefBoodschapDoor(message.value)">verstuur naar Suske</button>
-inkomende boodschap van beneden: {{vanBeneden}}
+<!-- <suske [boodschap]="bericht" (naarBoven)="doeIetsMet($event)"></suske> -->
+<!-- <input type="text" #message><button (click)="geefBoodschapDoor(message.value)">verstuur naar Suske</button> -->
+<!-- inkomende boodschap van beneden: {{vanBeneden}} -->
+<!-- <div *ngIf="invisibilityCape">now you see me</div>
+<div>now you don't</div>
+<button (click)="putCape('no')">UNCAPE ME!</button>
+<button (click)="putCape('normal')">CAPE ME!</button>
+<button (click)="putCape('magic')">MAGIC CAPE ME!</button>
+<select>
+<option>één</option>
+<option *ngIf="invisibilityCape">twee</option>
+<option>drie</option> -->
+
+
+
+<div></div>
+<div>
+    <stripfiguur *ngFor="let toon of figuren" [naam]="toon" [dag]="day"></stripfiguur>
+    <!-- <div *ngFor="let poipoiouhds of figuren">{{poipoiouhds|namechanger}}</div> -->
+    
+</div>
+<!-- <div [ngSwitch]="invisibilityCape">
+    <div *ngSwitchCase="'normal'">normal cape</div>
+    <div *ngSwitchCase="'magic'">magic cape</div>
+    <div *ngSwitchCase="'no'">no cape</div>
+
+</div> -->
+<input type="text" (input)="setTemperature($event)">
+<div>
+    value in Fahrenheit: {{temperature|fahrenheit}}
+    without pipe: {{temperature}}
+</div>
